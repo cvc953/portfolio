@@ -413,4 +413,9 @@ h2 {
     .contact {
         grid-template-columns: 1fr;
     }
+
+    .contact>div {
+        width: 100%;
+        min-width: 0;
+    }
 }
