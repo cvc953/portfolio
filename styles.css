@@ -164,6 +164,8 @@ h1 {
 
 h2 {
     font-size: clamp(2rem, 3vw, 2.6rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .lede {
@@ -248,6 +250,7 @@ h2 {
     justify-content: space-between;
     margin-bottom: 18px;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .panel-text {
@@ -394,5 +397,20 @@ h2 {
 
     nav {
         gap: 12px;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        max-width: 100%;
+    }
+
+    .panel-head {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
     }
 }
