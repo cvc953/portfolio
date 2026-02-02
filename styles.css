@@ -418,4 +418,14 @@ h2 {
         width: 100%;
         min-width: 0;
     }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .contact-actions a {
+        width: 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
 }
