@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio profesional: proyectos destacados, experiencia y contacto.">
+  <title>Portafolio • Cristian Villalobos Cuadrado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="bg-orb bg-orb--one"></div>
+  <div class="bg-orb bg-orb--two"></div>
+  <header class="top-bar">
+    <div class="logo">CVC</div>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cta"
+      onclick="document.querySelector('#contacto').scrollIntoView({behavior:'smooth'})">Hablemos</button>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Portafolio 2026</p>
+        <h1>Construyo experiencias digitales <span class="accent">claras</span> y <span class="accent">audaces</span>.
+        </h1>
+        <p class="lede">Diseño y desarrollo productos que resuelven problemas reales, con foco en desempeño,
+          accesibilidad y una estética cuidada.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#proyectos">Ver proyectos</a>
+          <a class="ghost" href="#contacto">Disponibilidad</a>
+        </div>
+        <ul class="chips">
+          <li>Flutter</li>
+          <li>Android (Kotlin)</li>
+          <li>Backend (Python)</li>
+          <li>APIs REST</li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <p class="small">Rol actual</p>
+        <h3>Junior Developer</h3>
+        <p class="muted">Disponible para aprender y colaborar.</p>
+        <div class="pill-row">
+          <span class="pill">Flutter</span>
+          <span class="pill">Kotlin</span>
+          <span class="pill">Python</span>
+          <span class="pill">APIs REST</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="panel">
+      <div class="panel-head">
+        <p class="eyebrow">Perfil</p>
+        <h2>Sobre mí</h2>
+      </div>
+      <p class="panel-text">Soy Cristian Villalobos Cuadrado, desarrollador junior enfocado en Flutter, Kotlin y
+        backend con Python. He construido proyectos personales y académicos que puedes ver en mi GitHub. Me motiva
+        aprender rápido, entregar soluciones claras y seguir mejorando mis buenas prácticas.</p>
+      <div class="grid two">
+        <div class="card">
+          <p class="small">Fortalezas</p>
+          <ul class="list">
+            <li>Aprendizaje continuo y adaptación a nuevos retos.</li>
+            <li>Enfoque en UI mobile y experiencia de usuario.</li>
+            <li>Buenas prácticas en proyectos personales.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="small">Tecnologías clave</p>
+          <ul class="list list-inline">
+            <li>Flutter (Dart)</li>
+            <li>Kotlin</li>
+            <li>Python</li>
+            <li>APIs REST</li>
+            <li>Git / GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="panel">
+      <div class="panel-head">
+        <p class="eyebrow">Selección</p>
+        <h2>Proyectos destacados</h2>
+      </div>
+      <div class="grid three" id="project-grid">
+        <!-- Tarjetas generadas por script.js -->
+      </div>
+    </section>
+
+    <section id="experiencia" class="panel">
+      <div class="panel-head">
+        <p class="eyebrow">Trayectoria</p>
+        <h2>Experiencia</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <!-- Items generados por script.js -->
+      </div>
+    </section>
+
+    <section id="contacto" class="panel contact">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>¿Hablamos?</h2>
+        <p class="panel-text">Cuéntame sobre tu proyecto, rol o idea. Respondo en 24h.</p>
+        <div class="contact-actions">
+          <a class="cta" href="mailto:cvcorporation05@gmail.com">cvcorporation05@gmail.com</a>
+          <a class="ghost" href="www.linkedin.com/in/cristian-villalobos-cuadrado-0a4672276" target="_blank"
+            rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="card contact-card">
+        <p class="small">Preferencias</p>
+        <ul class="list">
+          <li>Proyectos entre 2-6 meses.</li>
+          <li>Equipos distribuidos o híbridos.</li>
+          <li>Foco en shipping continuo y ownership compartido.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 · Cristian Villalobos Cuadrado</span>
+    <span class="muted">Diseñado con cariño y café.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
