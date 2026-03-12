@@ -9,6 +9,16 @@ const projects = [
             { label: "Repositorio", url: "https://github.com/cvc953/avas-eto" },
         ],
     },
+      {
+        title: "Local Player",
+        description: "Reproductor de música local en Android con Jetpack Compose.",
+        tags: ["Kotlin", "Android", "Compose"],
+        year: "2026",
+        role: "Autor",
+        links: [
+            { label: "Repositorio", url: "https://github.com/cvc953/localplayer" },
+        ],
+    },
     {
         title: "TimeLyr",
         description: "Buscador de letras para música local con metadatos y soporte LRC.",
@@ -27,16 +37,6 @@ const projects = [
         role: "Autor",
         links: [
             { label: "Repositorio", url: "https://github.com/cvc953/EduProjects" },
-        ],
-    },
-    {
-        title: "Local Player",
-        description: "Reproductor de música local en Android con Jetpack Compose.",
-        tags: ["Kotlin", "Android", "Compose"],
-        year: "2026",
-        role: "Autor",
-        links: [
-            { label: "Repositorio", url: "https://github.com/cvc953/localplayer" },
         ],
     },
     {
