@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "About me",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "hero": {
+    "eyebrow": "Portfolio 2026",
+    "title": "I build clear and bold digital experiences.",
+    "subtitle": "I design and develop products that solve real problems, with focus on performance, accessibility, and polished aesthetics.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Availability",
+    "cardLabel": "Current role",
+    "cardRole": "Mobile Developer",
+    "cardDescription": "Looking for roles where I can contribute to mobile development and application architecture.",
+    "pills": ["Flutter", "Android (Kotlin)", "Backend (Python)", "REST APIs"]
+  },
+  "about": {
+    "eyebrow": "Profile",
+    "title": "About me",
+    "description": "I'm a mobile developer with experience in Flutter and native Android. I focus on creating apps that not only work well but also feel good — responsive interfaces, smooth transitions, and data that displays when the user needs it.\n\nMy strength lies at the intersection of business logic and user experience. I don't settle for 'it works', I aim for 'it works in a way that makes sense'.",
+    "strengthsTitle": "Strengths",
+    "strengths": [
+      "State management in complex apps.",
+      "Local data processing (audio, metadata).",
+      "External API integration (LRCLib, etc.).",
+      "Building reactive UIs with Compose/Flutter."
+    ],
+    "techTitle": "Key Technologies"
+  },
+  "projects": {
+    "eyebrow": "Selection",
+    "title": "Featured Projects",
+    "viewRepository": "View repository",
+    "viewProject": "View project"
+  },
+  "experience": {
+    "eyebrow": "Background",
+    "title": "Technical Experience"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk?",
+    "description": "Tell me about your project, role or idea. I respond within 24h.",
+    "preferencesTitle": "Preferences",
+    "preferences": [
+      "Projects between 2-6 months.",
+      "Distributed or hybrid teams.",
+      "Focus on continuous shipping and shared ownership."
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 · Cristian Villalobos Cuadrado",
+    "tagline": "Made with love and coffee."
+  },
+  "languages": {
+    "es": "Español",
+    "en": "English"
+  }
+}
