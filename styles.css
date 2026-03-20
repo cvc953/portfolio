@@ -21,9 +21,7 @@
 
 body {
     font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
-    background: radial-gradient(circle at top, rgba(0, 217, 255, 0.08), transparent 55%),
-        radial-gradient(circle at 20% 20%, rgba(0, 153, 204, 0.1), transparent 50%),
-        var(--bg);
+    background: var(--bg);
     color: var(--text);
     min-height: 100vh;
     line-height: 1.6;
@@ -47,27 +45,34 @@ body {
 }
 
 .bg-orb {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(0px);
-    opacity: 0.5;
-    z-index: -1;
+    display: none;
 }
 
-.bg-orb--one {
-    width: 520px;
-    height: 520px;
-    background: radial-gradient(circle, rgba(0, 217, 255, 0.15), transparent 60%);
-    top: -200px;
-    left: -120px;
-}
-
-.bg-orb--two {
-    width: 480px;
-    height: 480px;
-    background: radial-gradient(circle, rgba(0, 153, 204, 0.12), transparent 65%);
-    bottom: -220px;
-    right: -120px;
+@media (min-width: 768px) {
+    .bg-orb {
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        opacity: 0.5;
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    .bg-orb--one {
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(circle, rgba(0, 217, 255, 0.15), transparent 60%);
+        top: -200px;
+        left: -120px;
+    }
+    
+    .bg-orb--two {
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba(0, 153, 204, 0.12), transparent 65%);
+        bottom: -220px;
+        right: -120px;
+    }
 }
 
 a {
@@ -80,11 +85,16 @@ a {
     justify-content: space-between;
     gap: 24px;
     padding: 18px 24px;
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15, 23, 42, 0.9);
     border: 1px solid var(--line);
     border-radius: 999px;
-    backdrop-filter: blur(10px);
     margin-bottom: 64px;
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .top-bar {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .logo {
