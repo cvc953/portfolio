@@ -26,6 +26,8 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     padding: 32px clamp(20px, 4vw, 64px) 64px;
+    margin: 0 auto;
+    max-width: 1300px;
 }
 
 .skip-link {

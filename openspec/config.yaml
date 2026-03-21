@@ -1,0 +1,30 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Tech stack: HTML5 + CSS3 + Vanilla JS (static site)
+  Deployment: Cloudflare Workers (wrangler.jsonc)
+  Fonts: Google Fonts (Space Grotesk)
+  Theme: Dark mode con acentos cyan (#00d9ff)
+  Assets: Static favicons y manifest
+
+rules:
+  proposal:
+    - Include redesign rationale y recruiter-focused improvements
+    - Identify UX anti-patterns que reducen conversión
+  specs:
+    - Use Before/After format para visualizar cambios
+    - Priorizar recruiter decision criteria
+  design:
+    - Mantener simplicidad (static site)
+    - Considerar accesibilidad y performance
+  tasks:
+    - Group por sección: hero, proyectos, experiencia, contacto
+    - Keep tasks small para feedback rápido
+  apply:
+    - Follow existing CSS patterns y naming conventions
+    - No frameworks nuevos - mantener vanilla
+  verify:
+    - Validar links funcionales
+    - Check mobile responsiveness
+    - Contrast ratios para accesibilidad
