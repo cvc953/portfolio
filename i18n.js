@@ -14,7 +14,7 @@ const i18n = (() => {
   // ============================================================
   // PRIVATE STATE
   // ============================================================
-  
+
   let currentLang = 'es';
   const STORAGE_KEY = 'preferred-lang';
   const SUPPORTED_LANGS = ['es', 'en'];
@@ -23,7 +23,7 @@ const i18n = (() => {
   // INLINED TRANSLATIONS
   // Avoids fetch for faster init and simpler deployment
   // ============================================================
-  
+
   const esTranslations = {
     "nav": {
       "about": "Sobre mí",
@@ -46,7 +46,8 @@ const i18n = (() => {
     "about": {
       "eyebrow": "Perfil",
       "title": "Sobre mí",
-      "description": "Soy Cristian Villalobos Cuadrado, desarrollador mobile con experiencia en Flutter y Android nativo. Me enfoco en crear apps que no solo funcionan bien, sino que también se sienten bien — interfaces responsivas, transiciones fluidas y datos que se muestran cuando el usuario los necesita.\n\nMi fortaleza está en la intersección entre la lógica de negocio y la experiencia de usuario. No me conformo con 'funciona', busco 'funciona de una manera que tiene sentido'.",
+      "description": "Soy Cristian Villalobos Cuadrado, desarrollador mobile con experiencia en Flutter y Android nativo. Me enfoco en crear apps que no solo funcionan bien, sino que también se sienten bien — interfaces responsivas, transiciones fluidas y datos que se muestran cuando el usuario los necesita.",
+      "description2": "\n\nMi fortaleza está en la intersección entre la lógica de negocio y la experiencia de usuario. No me conformo con 'funciona', busco 'funciona de una manera que tiene sentido'.",
       "strengthsTitle": "Fortalezas",
       "strength1": "Manejo de estado en apps complejas.",
       "strength2": "Procesamiento de datos locales (audio, metadatos).",
@@ -105,7 +106,8 @@ const i18n = (() => {
     "about": {
       "eyebrow": "Profile",
       "title": "About me",
-      "description": "I'm Cristian Villalobos Cuadrado, a mobile developer with experience in Flutter and native Android. I focus on creating apps that not only work well but also feel good — responsive interfaces, smooth transitions, and data that displays when the user needs it.\n\nMy strength lies at the intersection of business logic and user experience. I don't settle for 'it works', I aim for 'it works in a way that makes sense'.",
+      "description": "I'm Cristian Villalobos Cuadrado, a mobile developer with experience in Flutter and native Android. I focus on creating apps that not only work well but also feel good — responsive interfaces, smooth transitions, and data that displays when the user needs it.",
+      "description2": "\n\nMy strength lies at the intersection of business logic and user experience. I don't settle for 'it works', I aim for 'it works in a way that makes sense'.",
       "strengthsTitle": "Strengths",
       "strength1": "State management in complex apps.",
       "strength2": "Local data processing (audio, metadata).",
@@ -155,7 +157,7 @@ const i18n = (() => {
   function detectLanguage() {
     const browserLang = navigator.language || navigator.userLanguage || '';
     const langCode = browserLang.split('-')[0].toLowerCase();
-    
+
     if (SUPPORTED_LANGS.includes(langCode)) {
       return langCode;
     }
@@ -170,7 +172,7 @@ const i18n = (() => {
   function getTranslation(key) {
     const keys = key.split('.');
     let value = translations[currentLang];
-    
+
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
@@ -178,7 +180,7 @@ const i18n = (() => {
         return ''; // Graceful fallback
       }
     }
-    
+
     return typeof value === 'string' ? value : '';
   }
 
@@ -213,7 +215,7 @@ const i18n = (() => {
   // CROSS-TAB SYNCHRONIZATION
   // Listen for storage changes from other tabs
   // ============================================================
-  
+
   window.addEventListener('storage', (event) => {
     if (event.key === STORAGE_KEY && event.newValue) {
       if (SUPPORTED_LANGS.includes(event.newValue)) {
@@ -221,10 +223,10 @@ const i18n = (() => {
         updateDOM();
         updateToggleButtons();
         document.documentElement.lang = currentLang;
-        
+
         // Dispatch custom event for other components
-        window.dispatchEvent(new CustomEvent('i18n:languageChanged', { 
-          detail: { language: currentLang } 
+        window.dispatchEvent(new CustomEvent('i18n:languageChanged', {
+          detail: { language: currentLang }
         }));
       }
     }
@@ -233,7 +235,7 @@ const i18n = (() => {
   // ============================================================
   // PUBLIC API
   // ============================================================
-  
+
   return {
     /**
      * Initialize the i18n module
@@ -249,10 +251,10 @@ const i18n = (() => {
         // Detect from browser
         currentLang = detectLanguage();
       }
-      
+
       // Update DOM with current language
       this.updateUI();
-      
+
       return currentLang;
     },
 
@@ -275,10 +277,10 @@ const i18n = (() => {
         console.warn(`i18n: unsupported language "${lang}", defaulting to "es"`);
         lang = 'es';
       }
-      
+
       currentLang = lang;
       localStorage.setItem(STORAGE_KEY, lang);
-      
+
       // Update URL if requested (for /en/ support)
       if (updateURL) {
         if (lang === 'en') {
@@ -293,12 +295,12 @@ const i18n = (() => {
           }
         }
       }
-      
+
       this.updateUI();
-      
+
       // Dispatch custom event for other components
-      window.dispatchEvent(new CustomEvent('i18n:languageChanged', { 
-        detail: { language: lang } 
+      window.dispatchEvent(new CustomEvent('i18n:languageChanged', {
+        detail: { language: lang }
       }));
     },
 
